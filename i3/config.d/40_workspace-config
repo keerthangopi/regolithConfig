@@ -1,0 +1,164 @@
+###############################################################################
+# Window and Workspace Configuration
+###############################################################################
+#
+## Custom Variables
+#
+## Modify // Window Position // <><Shift> ↑ ↓ ← → ##
+#indsym $mod+Shift+Left move left
+#indsym $mod+Shift+Down move down
+#indsym $mod+Shift+Up move up
+#indsym $mod+Shift+Right move right
+#
+## Modify // Window Position // <><Shift> k j h l ##
+#et_from_resource $i3-wm.binding.move_left i3-wm.binding.move_left Shift+h
+#et_from_resource $i3-wm.binding.move_right i3-wm.binding.move_right Shift+l
+#et_from_resource $i3-wm.binding.move_up i3-wm.binding.move_up Shift+k
+#et_from_resource $i3-wm.binding.move_down i3-wm.binding.move_down Shift+j
+#indsym $mod+$i3-wm.binding.move_left move left
+#indsym $mod+$i3-wm.binding.move_down move down
+#indsym $mod+$i3-wm.binding.move_up move up
+#indsym $mod+$i3-wm.binding.move_right move right
+#
+## Modify // Containing Workspace // <><Ctrl><Shift> ↑ ↓ ← → ##
+#et_from_resource $i3-wm.binding.move_workspace_output_left i3-wm.binding.move_workspace_output_left Ctrl+Shift+Left
+#et_from_resource $i3-wm.binding.move_workspace_output_right i3-wm.binding.move_workspace_output_right Ctrl+Shift+Right
+#et_from_resource $i3-wm.binding.move_workspace_output_up i3-wm.binding.move_workspace_output_up Ctrl+Shift+Up
+#et_from_resource $i3-wm.binding.move_workspace_output_down i3-wm.binding.move_workspace_output_down Ctrl+Shift+Down
+#indsym $mod+$i3-wm.binding.move_workspace_output_left move workspace to output left
+#indsym $mod+$i3-wm.binding.move_workspace_output_right move workspace to output right
+#indsym $mod+$i3-wm.binding.move_workspace_output_up move workspace to output up
+#indsym $mod+$i3-wm.binding.move_workspace_output_down move workspace to output down
+#
+## Modify // Containing Workspace // <><Ctrl><Shift> k j h l ##
+#et_from_resource $i3-wm.binding.take_left i3-wm.binding.take_left Ctrl+Shift+h
+#et_from_resource $i3-wm.binding.take_right i3-wm.binding.take_right Ctrl+Shift+l
+#et_from_resource $i3-wm.binding.take_up i3-wm.binding.take_up Ctrl+Shift+k
+#et_from_resource $i3-wm.binding.take_down i3-wm.binding.take_down Ctrl+Shift+j
+#indsym $mod+$i3-wm.binding.take_left move workspace to output left
+#indsym $mod+$i3-wm.binding.take_down move workspace to output down
+#indsym $mod+$i3-wm.binding.take_up move workspace to output up
+#indsym $mod+$i3-wm.binding.take_right move workspace to output right
+#
+## Modify // Vertical Window Orientation // <> v ##
+#et_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v v
+#indsym $mod+$i3-wm.binding.split_v split vertical
+#
+## Modify // Horizontal Window Orientation // <> g ##
+#et_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h g
+#indsym $mod+$i3-wm.binding.split_h split horizontal
+#
+## Modify // Toggle Window Orientation // <> Backspace ##
+#et_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle BackSpace
+#indsym $mod+$i3-wm.binding.orientation_toggle split toggle
+#
+## Modify // Window Fullscreen Toggle // <> f ##
+#et_from_resource $i3-wm.binding.fullscreen_toggle i3-wm.binding.fullscreen_toggle f
+#indsym $mod+$i3-wm.binding.fullscreen_toggle fullscreen toggle
+#
+## Modify // Window Floating Toggle // <><Shift> f ##
+#et_from_resource $i3-wm.binding.float_toggle i3-wm.binding.float_toggle Shift+f
+#indsym $mod+Shift+$i3-wm.binding.float_toggle floating toggle
+#
+## Modify // Move to Scratchpad // <><Ctrl> m ##
+#et_from_resource $i3-wm.binding.move_scratchpad i3-wm.binding.move_scratchpad Ctrl+m
+#indsym $mod+$i3-wm.binding.move_scratchpad move to scratchpad
+#
+## Modify // Tile/Float Focus Toggle // <><Shift> t ##
+#et_from_resource $i3-wm.binding.focus_toggle i3-wm.binding.focus_toggle Shift+t
+#indsym $mod+$i3-wm.binding.focus_toggle focus mode_toggle
+#
+## Modify // Window Layout Mode // <> t ##
+#et_from_resource $i3-wm.binding.layout_mode i3-wm.binding.layout_mode t
+#indsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed splith splitv
+#
+## Modify // Move Window to Workspace 1 - 10 // <><Shift> 0..9 ##
+#indsym $mod+Shift+$ws1_key move container to workspace number $ws1
+#indsym $mod+Shift+$ws2_key move container to workspace number $ws2
+#indsym $mod+Shift+$ws3_key move container to workspace number $ws3
+#indsym $mod+Shift+$ws4_key move container to workspace number $ws4
+#indsym $mod+Shift+$ws5_key move container to workspace number $ws5
+#indsym $mod+Shift+$ws6_key move container to workspace number $ws6
+#indsym $mod+Shift+$ws7_key move container to workspace number $ws7
+#indsym $mod+Shift+$ws8_key move container to workspace number $ws8
+#indsym $mod+Shift+$ws9_key move container to workspace number $ws9
+#indsym $mod+Shift+$ws10_key move container to workspace number $ws10
+## Modify // Move Window to Workspace 11 - 19// <><Ctrl><Shift> 1..9 ##
+#indsym $mod+Shift+Ctrl+$ws1_key move container to workspace number $ws11
+#indsym $mod+Shift+Ctrl+$ws2_key move container to workspace number $ws12
+#indsym $mod+Shift+Ctrl+$ws3_key move container to workspace number $ws13
+#indsym $mod+Shift+Ctrl+$ws4_key move container to workspace number $ws14
+#indsym $mod+Shift+Ctrl+$ws5_key move container to workspace number $ws15
+#indsym $mod+Shift+Ctrl+$ws6_key move container to workspace number $ws16
+#indsym $mod+Shift+Ctrl+$ws7_key move container to workspace number $ws17
+#indsym $mod+Shift+Ctrl+$ws8_key move container to workspace number $ws18
+#indsym $mod+Shift+Ctrl+$ws9_key move container to workspace number $ws19
+#
+# move focused container to workspace, move to workspace
+## Modify // Carry Window to Workspace 1 - 10// <><Alt> 0..9 ##
+#indsym $mod+$alt+$ws1_key move container to workspace number $ws1; workspace number $ws1
+#indsym $mod+$alt+$ws2_key move container to workspace number $ws2; workspace number $ws2
+#indsym $mod+$alt+$ws3_key move container to workspace number $ws3; workspace number $ws3
+#indsym $mod+$alt+$ws4_key move container to workspace number $ws4; workspace number $ws4
+#indsym $mod+$alt+$ws5_key move container to workspace number $ws5; workspace number $ws5
+#indsym $mod+$alt+$ws6_key move container to workspace number $ws6; workspace number $ws6
+#indsym $mod+$alt+$ws7_key move container to workspace number $ws7; workspace number $ws7
+#indsym $mod+$alt+$ws8_key move container to workspace number $ws8; workspace number $ws8
+#indsym $mod+$alt+$ws9_key move container to workspace number $ws9; workspace number $ws9
+#indsym $mod+$alt+$ws10_key move container to workspace number $ws10; workspace number $ws10
+## Modify // Carry Window to Workspace 11 - 19 // <><Alt><Ctrl> 1..9 ##
+#indsym $mod+$alt+Ctrl+$ws1_key move container to workspace number $ws11; workspace number $ws11
+#indsym $mod+$alt+Ctrl+$ws2_key move container to workspace number $ws12; workspace number $ws12
+#indsym $mod+$alt+Ctrl+$ws3_key move container to workspace number $ws13; workspace number $ws13
+#indsym $mod+$alt+Ctrl+$ws4_key move container to workspace number $ws14; workspace number $ws14
+#indsym $mod+$alt+Ctrl+$ws5_key move container to workspace number $ws15; workspace number $ws15
+#indsym $mod+$alt+Ctrl+$ws6_key move container to workspace number $ws16; workspace number $ws16
+#indsym $mod+$alt+Ctrl+$ws7_key move container to workspace number $ws17; workspace number $ws17
+#indsym $mod+$alt+Ctrl+$ws8_key move container to workspace number $ws18; workspace number $ws18
+#indsym $mod+$alt+Ctrl+$ws9_key move container to workspace number $ws19; workspace number $ws19
+#
+#et_from_resource $i3-wm.workspace.auto_back_and_forth i3-wm.workspace.auto_back_and_forth no
+#orkspace_auto_back_and_forth $i3-wm.workspace.auto_back_and_forth
+#
+# Use Mouse+$mod to drag floating windows to their wanted position
+#loating_modifier $mod
+
+# Force Windows to Open in Particular Workspaces
+assign [class="Gnome-terminal"] $ws1
+assign [class="Google-chrome"] $ws2
+assign [class="jetbrains-studio"] $ws3
+assign [class="Android Emulator - Pixel_XL_API_31:5554"] $ws3
+assign [class="Code"] $ws4
+assign [class="jetbrains-idea-ce"] $ws5
+assign [class="jetbrains-idea"] $ws5
+assign [class="init.py"] $ws5
+assign [class="discord"] $ws6
+assign [class="zoom"] $ws8
+assign [class="YouTube Music"] $ws10
+assign [class="WhatSie"] $ws11
+
+# Auto exec
+bindsym $mod+alt+v exec "code" 
+bindsym $mod+Shift+Ctrl+s exec /home/keerthan/.screenlayout/laptop_screen.sh
+bindsym $mod+Shift+Ctrl+d exec /home/keerthan/.screenlayout/dual_external.sh
+
+set $dp = DP-0.1.1
+set $hdmi = DP-0.3
+
+#Assign Workspace to displays
+#primary
+workspace "$ws4"  output $dp 
+workspace "$ws5"  output $dp
+workspace "$ws8"  output $dp 
+workspace "$ws10" output $dp
+
+#secondary
+workspace "$ws1" output $hdmi 
+workspace "$ws2" output $hdmi
+workspace "$ws3" output $hdmi
+workspace "$ws7" output $hdmi 
+
+bindsym $mod+$alt+Ctrl+Left exec /home/keerthan/.screenlayout/screenrtl.sh
+bindsym $mod+$alt+Ctrl+Right exec /home/keerthan/.screenlayout/screenltr.sh
+bindsym $mod+$alt+Ctrl+E exec /home/keerthan/.screenlayout/screenltr2EDisplay.sh
+
